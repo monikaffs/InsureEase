@@ -18,7 +18,14 @@ public class AdminServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+    	
+    	HttpSession session = request.getSession(false);
 
+    	if (session == null || session.getAttribute("adminUser") == null) {
+    	    response.sendRedirect("adminLogin.jsp");
+    	    return;
+    	}
+    	
         ArrayList<ClaimBean> list = new ArrayList<>();
         String keyword = request.getParameter("search");
 

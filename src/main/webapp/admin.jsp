@@ -8,20 +8,28 @@
 
 <body>
 
-<div class="navbar">InsureEase Admin Dashboard - Insurance Claims</div>
+<div class="navbar1">InsureEase Admin Dashboard - Insurance Claims</div>
 
-<div class="hero" style="width:90%">
+<div class="admin-topbar">
+    <a href="index.jsp" class="btn home-btn">Home</a>
+    <a href="adminLogout" class="btn logout-btn">Logout</a>
+</div>
 
-<h2>All Insurance Claims</h2>
-
+<div class="hero1">
+    <h2 class="page-title">All Insurance Claims</h2>
+    
+    
 
 <form method="get" action="admin" style="margin-bottom:20px;text-align:center;">
+
     <input type="text" name="search" placeholder="Search by Name or ID"
            style="padding:8px;width:220px;border-radius:6px;border:1px solid #ccc;">
     <button class="btn">Search</button>
 </form>
 
-<!-- ===== ADMIN STATS ===== -->
+
+
+<!-- admin columns -->
 <div class="stats-container">
 
     <div class="stat-card">
@@ -84,7 +92,7 @@
 
 </div>
 
-<div class="footer">InsureEase: Insurance Claim System</div>
+<div class="footer">&copy; InsureEase - Insurance Claim System</div>
 
 </body>
 </html>
